@@ -13,7 +13,7 @@ jobs:
   validate:
     runs-on: self-hosted
     env:
-      PYTHON_VER: "3.10"
+      PYTHON_VER: "3.11"
       GOVER: 1.18
       GOOS: linux
       GOARCH: amd64
