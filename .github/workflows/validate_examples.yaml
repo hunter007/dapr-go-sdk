@@ -3,7 +3,7 @@ name: validate-examples
 on:
   push:
     branches:
-      - main
+      - main*
     tags:
       - v*
   pull_request:
