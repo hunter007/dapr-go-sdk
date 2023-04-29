@@ -15,8 +15,8 @@ jobs:
     env:
       PYTHON_VER: "3.11"
       GOVER: 1.18
-      GOOS: linux
-      GOARCH: amd64
+      GOOS: darwin
+      GOARCH: arm64
       GOPROXY: https://proxy.golang.org
       DAPR_INSTALL_URL: https://raw.githubusercontent.com/dapr/cli/master/install/install.sh
       DAPR_CLI_REF: ""
