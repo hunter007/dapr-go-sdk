@@ -85,7 +85,7 @@ jobs:
         if: env.DAPR_REF != ''
         run: |
           docker stop dapr_placement
-          cd dapr
+          cd dapr_runtime
           ls -l dist/linux_amd64/release
           ./dist/linux_amd64/release/placement --healthz-port 9091 &
       - name: Check Examples
