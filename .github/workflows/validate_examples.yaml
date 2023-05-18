@@ -20,7 +20,7 @@ jobs:
       GOPROXY: https://proxy.golang.org
       DAPR_INSTALL_URL: https://raw.githubusercontent.com/dapr/cli/master/install/install.sh
       DAPR_CLI_REF: ""
-      DAPR_REF: ""
+      DAPR_REF: 770d4e51604f1264d8bb25cedf16ea9f77539394
     steps:
       - uses: actions/checkout@v3
       - name: Determine latest Dapr Runtime version
@@ -86,6 +86,7 @@ jobs:
         run: |
           docker stop dapr_placement
           cd dapr
+          ls -l dist/linux_amd64/release
           ./dist/linux_amd64/release/placement --healthz-port 9091 &
       - name: Check Examples
         run: |
