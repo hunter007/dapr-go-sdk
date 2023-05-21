@@ -67,7 +67,6 @@ name: Build the app
 -->
 
 ```bash
-go mod vendor
 go build -o order order.go
 ```
 

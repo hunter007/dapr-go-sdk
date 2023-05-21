@@ -4,8 +4,7 @@ bin: go-mod
 
 .PHONY: go-mod
 go-mod: go-check
-	go mod tidy -compat=1.20
-	go mod vendor
+	go mod tidy -compat=1.19
 
 .PHONY: go-check
 go-check:

@@ -5,7 +5,6 @@ bin: go-mod
 
 go-mod: go-check
 	go mod tidy
-	go mod vendor
 
 go-check:
 	@which go > /dev/null
