@@ -1,6 +1,6 @@
 module github.com/dapr/go-sdk/examples/configuration
 
-go 1.19
+go 1.20
 
 // Needed to validate SDK changes in CI/CD
 replace github.com/dapr/go-sdk => ../../
