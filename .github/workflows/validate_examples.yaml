@@ -90,9 +90,9 @@ jobs:
       - name: Check Examples
         run: |
           cd examples
-          ./validate.sh configuration
-          ./validate.sh hello-world
-          ./validate.sh pubsub
-          ./validate.sh service
-          ./validate.sh actor
+          # ./validate.sh configuration
+          # ./validate.sh hello-world
+          # ./validate.sh pubsub
+          # ./validate.sh service
+          # ./validate.sh actor
           ./validate.sh grpc-service

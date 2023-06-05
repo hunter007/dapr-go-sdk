@@ -23,7 +23,7 @@ sleep: 15
 ```bash
 dapr run --app-id grpc-server \
          --app-port 50050 \
-         --log-level debug \
+         --resources-path ./config \
          go run ./server/main.go
 ```
 
@@ -42,7 +42,7 @@ sleep: 15
 
 ```bash
 dapr run --app-id grpc-client \
-         --log-level debug \
+         --resources-path ./config \
          --dapr-grpc-port 50007
          go run ./client/main.go
 ```
@@ -64,11 +64,3 @@ dapr stop --app-id sub
 ```
 
 <!-- END_STEP -->
-
-## Result
-
-```shell
-== APP == 2023/03/29 21:36:07 event - PubsubName: messages, Topic: neworder, ID: 82427280-1c18-4fab-b901-c7e68d295d31, Data: ping
-== APP == 2023/03/29 21:36:07 event - PubsubName: messages, Topic: neworder, ID: cc13829c-af77-4303-a4d7-55cdc0b0fa7d, Data: multi-pong
-== APP == 2023/03/29 21:36:07 event - PubsubName: messages, Topic: neworder, ID: 0147f10a-d6c3-4b16-ad5a-6776956757dd, Data: multi-ping
-```
