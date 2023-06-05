@@ -58,8 +58,8 @@ name: Shutdown dapr
 -->
 
 ```bash
-dapr stop --app-id sub
-(lsof -i:8080 | grep sub) | awk '{print $2}' | xargs  kill
+dapr stop --app-id grpc-server
+(lsof -i:50050 | grep grpc-server) | awk '{print $2}' | xargs  kill
 ```
 
 <!-- END_STEP -->
