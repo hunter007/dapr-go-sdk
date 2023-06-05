@@ -5,6 +5,7 @@ import (
 	"log"
 	"net"
 
+	daprd "github.com/dapr/go-sdk/service/grpc"
 	"google.golang.org/grpc"
 	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )
@@ -29,10 +30,13 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
+
 	s := grpc.NewServer()
 	pb.RegisterGreeterServer(s, &server{})
-	log.Printf("server listening at %v", lis.Addr())
-	if err := s.Serve(lis); err != nil {
-		log.Fatalf("failed to serve: %v", err)
+	daprServer := daprd.NewServiceWithGrpcServer(lis, s)
+
+	// start the server
+	if err := daprServer.Start(); err != nil {
+		log.Fatalf("server error: %v", err)
 	}
 }

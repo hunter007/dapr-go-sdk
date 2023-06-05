@@ -23,7 +23,8 @@ sleep: 15
 ```bash
 dapr run --app-id grpc-server \
          --app-port 50050 \
-         --resources-path ./config \
+         --app-protocol grpc \
+         --dapr-grpc-port 50007 \
          go run ./server/main.go
 ```
 
@@ -42,8 +43,6 @@ sleep: 15
 
 ```bash
 dapr run --app-id grpc-client \
-         --resources-path ./config \
-         --dapr-grpc-port 50007
          go run ./client/main.go
 ```
 
