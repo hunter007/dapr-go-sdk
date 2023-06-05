@@ -95,3 +95,4 @@ jobs:
           ./validate.sh pubsub
           ./validate.sh service
           ./validate.sh actor
+          ./validate.sh grpc-service

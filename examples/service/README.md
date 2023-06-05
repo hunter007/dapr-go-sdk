@@ -156,7 +156,7 @@ Uses the [config/cron.yaml](config/cron.yaml) component
 ### Cleanup
 
 <!-- STEP
-expected_stdout_lines: 
+expected_stdout_lines:
   - '✅  app stopped successfully: serving'
 expected_stderr_lines:
 name: Shutdown dapr
@@ -168,4 +168,3 @@ dapr stop --app-id serving
 ```
 
 <!-- END_STEP -->
-
