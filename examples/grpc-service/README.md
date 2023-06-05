@@ -22,7 +22,7 @@ sleep: 15
 
 ```bash
 dapr run --app-id grpc-server \
-         --app-port 50050 \
+         --app-port 50051 \
          --app-protocol grpc \
          --dapr-grpc-port 50007 \
          go run ./server/main.go
@@ -53,13 +53,13 @@ dapr run --app-id grpc-client \
 <!-- STEP
 expected_stdout_lines:
   - '✅  Exited Dapr successfully'
+  - '✅  Exited App successfully'
 expected_stderr_lines:
 name: Shutdown dapr
 -->
 
 ```bash
 dapr stop --app-id grpc-server
-(lsof -i:50050 | grep grpc-server) | awk '{print $2}' | xargs  kill
 ```
 
 <!-- END_STEP -->
