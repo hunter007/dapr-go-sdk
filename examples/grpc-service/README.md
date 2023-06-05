@@ -52,8 +52,7 @@ dapr run --app-id grpc-client \
 
 <!-- STEP
 expected_stdout_lines:
-  - '✅  Exited Dapr successfully'
-  - '✅  Exited App successfully'
+  - 'app stopped successfully: grpc-server'
 expected_stderr_lines:
 name: Shutdown dapr
 -->
